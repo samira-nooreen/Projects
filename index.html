@@ -1,114 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beauty & More!</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Temperature Converter</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="utils.css">
 </head>
-
 <body>
-    <div class="container mx-auto">
-        <header>
-            <div class="creative-box">
-                <nav class="flex justify-between items-center">
-                    <div class="logo font-bold text-blue" style="font-size: 2.5rem">Beauty & More!</div>
-                    <ul class="navbar flex items-center">
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Contact</li>
-                        <li>
-                            <button class="btn">
-                                <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg" alt="Cart" class="cartSymbol" width="24" height="24">
-                                Cart
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <main class="min-h-screen">
-            <section class="section1">
-                <div class="flex"></div>
-                <div class="topleft items-center flex-col px-2"></div>
-                <h1 class="my-1" style="font-size: 6rem;">Beauty in Every Shade.</h1>
-                <p>
-                    Welcome to Beauty & More!, where beauty meets innovation! Our makeup product line is designed to celebrate and enhance your natural beauty. From our diverse range of foundations that suit every skin tone, to our vibrant eyeshadow palettes that allow for endless creativity, Beauty & More! has everything you need to express yourself. Our products are meticulously formulated with high-quality, skin-loving ingredients, ensuring that your skin feels as good as it looks. Discover our exclusive collections designed to enhance your natural beauty and make you feel fabulous every day.
-                </p>
-                <div class="topright">
-                    <img src="pic..jpg" width="1000" height="500" class="makeupbrush1" alt="Makeup Brush">
-                    <img src="text.png" width="400" height="200" class="TextImage" alt="Text Image">
-                </div>
-            </section>
+    <div class="converter">
+        <h2>Temperature Converter</h2>
+        <label for="fromUnit">From:</label>
+       <select id="fromUnit">
+        <option value="C">Celsius</option>
+        <option value="F">Fahrenheit</optio n>
+        <option value="K">Kelvin</option>
+        <option value="R">Rankine</option>
+       </select>
+       <label for="toUnit">To:</label>
+       <select  id="toUnit">
+        <option value="C">Celsius</option>
+        <option value="F">Fahrenheit</option>
+        <option value="K">Kelvin</option>
+        <option value="R">Rankine</option>
+       </select>
+       <label for="temperature"></label>
+       <input type="number" id="temperature" placeholder="Enter Temperature">
+       <button onclick="convert()">Convert</button>
 
-            <section class="section2">
-                <p>
-                    Discover the beauty within. Enhance your look with our exclusive range of makeup products.
-                </p>
-                <div class="BigImgCenter"></div>
-                <h2 class="FoundationTxt" style="font-size: 4rem;">Flawless Foundation</h2>
-                <p>
-                    Achieve a flawless complexion with our lightweight and long-lasting Flawless Foundation. It provides buildable coverage that evens out skin tone while maintaining a natural finish. Suitable for all skin types, it’s your go-to for a perfect base that feels as good as it looks.
-                </p>
-                <img src="Founda.webp" height="600px" width="1200px" alt="Foundation" class="Foundationpic">
-                <button class="btnF">Shop Now</button>
-                <h2 class="FoundationTxt" style="font-size: 4rem;">Special Offers</h2>
-                <p>Check out our exclusive offers & discounts!</p>
-                <div class="Offer">
-                    <h2 class=" FoundationTxt Special" style="font-size: 4rem;">   Take 40% Off On Your First Order!</h2>
-
-                    <img alt="Special Offers" class="lazy" src="https://hudabeauty.com/on/demandware.static/-/Library-Sites-HudaSharedContent/default/dwe1e939be/homepage/B2-gifts.gif">
-                </div>
-                <button class="btnS">Buy Now</button>
-            </section>
-            <section class="section3">
-                <div class="product-container">
-                    <div class="product">
-                        <img src="lipsticks.jpeg" width="400px" height="400px" class="LipstickImg" alt="Lipsticks">
-                        <h4>Lipsticks</h4>
-                        <p class="price">$10.99</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product">
-                        <img src="eyeshadow pal.jpg" width="400px" height="400px" class="EyeshadowImg" alt="Eyeshadow Palette">
-                        <h5>Eyeshadow Palette</h5>
-                        <p class="price">$27.99</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product">
-                        <img src="mascara.webp" width="400px" height="400px" class="MascaraImg" alt="Mascara">
-                        <h6>Mascara</h6>
-                        <p class="price">$7.99</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section4">
-                <div class="shipping">
-                    <h2>Shipping Information</h2>
-                    <form>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                        <label for="address">Address:</label>
-                        <input type="text" id="address" name="address" required>
-                        <label for="city">City:</label>
-                        <input type="text" id="city" name="city" required>
-                        <label for="zip">Zip Code:</label>
-                        <input type="text" id="zip" name="zip" required>
-                        <button type="submit">Proceed to Checkout</button>
-                    </form>
-                </div>
-            </section>
-        </main>
-        <footer></footer>
+       <label for="result">Result</label>
+       <input type="text" id="result" readonly>
     </div>
-</body>
+    <script>
+        function convert(){
+            var fromUnit = document.getElementById('fromUnit').value;
+            var toUnit = document.getElementById('toUnit').value;
+            var temperature = parseFloat(document.getElementById('temperature').value);
+        
+            var converttedValue;
+            var resultUnit;
 
+            //Perform conversion logic
+            switch(fromUnit){
+                case 'C':
+                    if(toUnit == 'F'){
+                        converttedValue = (temperature * 9/5) + 32;
+                        resultUnit = 'F';
+                    }else if(toUnit === 'K'){
+                        converttedValue = temperature + 273.15;
+                        resultUnit = 'K';
+                    }else if(toUnit === 'R'){
+                        converttedValue = temperature + 273.15;
+                        resultUnit = 'R';
+                    }else {
+                        converttedValue = temperature ;
+                        resultUnit = 'C';
+                    }
+                    break;
+
+                    case 'F':
+                    if(toUnit == 'C'){
+                        converttedValue = (temperature - 32) * 5/9;
+                        resultUnit = 'C';
+                    }else if(toUnit === 'K'){
+                        converttedValue =( temperature - 32) * 5/9 + 273.15;
+                        resultUnit = 'K';
+                    }else if(toUnit === 'R'){
+                        converttedValue = temperature + 459.67;
+                        resultUnit = 'R';
+                    }else {
+                        converttedValue = temperature ;
+                        resultUnit = 'F';
+                    }
+                    break;
+
+                    case 'K':
+                    if(toUnit == 'C'){
+                        converttedValue = temperature -273.15;
+                        resultUnit = 'C';
+                    }else if(toUnit === 'K'){
+                        converttedValue = (temperature - 273.15)*9/5+32;
+                        resultUnit = 'K';
+                    }else if(toUnit === 'R'){
+                        converttedValue = temperature * 9/5;
+                        resultUnit = 'R';
+                    }else {
+                        converttedValue = temperature ;
+                        resultUnit = 'K';
+                    }
+                    break;
+
+                    case 'R':
+                    if(toUnit == 'C'){
+                        converttedValue = (temperature - 491.67) * 5/9;
+                        resultUnit = 'C';
+                    }else if(toUnit === 'K'){
+                        converttedValue = temperature - 459.67;
+                        resultUnit = 'K';
+                    }else if(toUnit === 'R'){
+                        converttedValue = temperature * 5/9;
+                        resultUnit = 'R';
+                    }else {
+                        converttedValue = temperature ;
+                        resultUnit = 'R';
+                    }
+                    break;
+            }
+            document.getElementById('result').value = converttedValue.toFixed(2) + ' ' +resultUnit;
+        }
+
+    </script>
+</body>
 </html>
